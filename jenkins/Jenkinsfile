@@ -6,9 +6,9 @@ node {
     env.FABRIC_API_SECRET = "${FABRIC_API_SECRET}"
 
     stage('Clone') {
-        git url: 'git@github.com:vgaidarji/ci-matters.git',
+        git url: 'https://github.com/aeciojr/ci-matters.git',
             branch: 'master',
-            credentialsId: '3ad9453e-3e34-44c4-977e-88f6b9f60dad'
+            AecioGitHub: '3ad9453e-3e34-44c4-977e-88f6b9f60dad'
     }
 
     stage('Build') {
