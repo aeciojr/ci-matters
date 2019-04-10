@@ -8,7 +8,7 @@ node {
     stage('Clone') {
         git url: 'https://github.com/aeciojr/ci-matters.git',
             branch: 'master',
-            AecioGitHub: '3ad9453e-3e34-44c4-977e-88f6b9f60dad'
+            credentialsId: 'AecioGitHub'
     }
 
     stage('Build') {
