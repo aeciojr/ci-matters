@@ -37,7 +37,7 @@ node {
 }
 
 def buildDebug() {
-    sh "./gradlew clean assembleDebug -PversionCode=${env.BUILD_NUMBER}  -PfabricApiKey=${env.FABRIC_API_KEY} -PfabricApiSecret=${env.FABRIC_API_SECRET}"
+    sh "./gradlew clean assembleDebug --stacktrace -PversionCode=${env.BUILD_NUMBER}  -PfabricApiKey=${env.FABRIC_API_KEY} -PfabricApiSecret=${env.FABRIC_API_SECRET}"
     archiveArtifacts artifacts: 'app/build/outputs/apk/*.apk', fingerprint: true
 }
 
